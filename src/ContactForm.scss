@@ -1,0 +1,61 @@
+.ContactForm {
+    padding-bottom: 50px;
+
+    form {
+        max-width: 800px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 30% 30% 1fr 20%;
+        grid-template-rows: 55px 200px 50px;
+
+        input,
+        textarea {
+            resize: none;
+            margin: 10px;
+            font-size: 20px;
+            border: 0px solid var(--dark-clr);
+            padding: 7px 15px;
+            border-radius: 10px;
+
+            &:focus {
+                outline: none;
+            }
+
+            &.name-input {
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+            }
+
+            &.email-input {
+                grid-row: 1 / 2;
+                grid-column: 2 / 3;
+            }
+
+            &.msg-input {
+                grid-row: 2 / 3;
+                grid-column: 1 / 5;
+                vertical-align: text-top;
+            }
+        }
+
+        .submit-btn {
+            grid-row: 3 / 4;
+            grid-column: 4 / 5;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--background-clr);
+            text-transform: uppercase;
+            background-color: var(--accent-clr-orange);
+            border: 3px solid var(--background-clr);
+            border-radius: 30px;
+            transition: 200ms ease-in-out;
+            padding: 5px 0;
+
+            &:hover {
+                cursor: pointer;
+                background-color: var(--background-clr);
+                color: var(--accent-clr-orange);
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.Skills {
+    width: 100%;
+    background-color: var(--accent-clr-orange);
+    padding: 50px 0px;
+    z-index: 1;
+
+    h2 {
+        font-size: 64px;
+        font-weight: 100;
+    }
+
+    .skills-container {
+        max-width: 50%;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 56px;
+        border-radius: 100px;
+    }   
+}

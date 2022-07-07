@@ -1,0 +1,272 @@
+.LaptopComponent {
+    flex: 2;
+    transform-style: preserve-3d;
+    perspective: 3800px;
+    perspective-origin: 50% 95%;
+    width: 50%;
+    aspect-ratio: 1.6;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-25%);
+    transition: 300ms ease-in-out;
+
+    &.moved {
+        transform: translateX(0%);
+    }
+}
+
+.screen-outline {
+    transform-style: preserve-3d;
+    width: 81%;
+    aspect-ratio: 1.6;
+    position: relative;
+    transform-origin: 50% 100%;
+    z-index: 1;
+    animation: screen 2s ease-in-out;
+}
+
+@keyframes screen {
+    0% {
+        transform: rotateX(-90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.screen-outline .front {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    aspect-ratio: 1.5;
+    background-color: #212222;
+    border: 3px solid #39404e;
+    outline: 6px solid #191d1d;
+    border-radius: 14px 14px 10px 10px;
+}
+
+.screen-outline .front .camera {
+    aspect-ratio: 1;
+    width: 10px;
+    border-radius: 50px;
+    background: radial-gradient(ellipse at center, rgb(32, 32, 32) 0%,#626364 40%,#3b4044 45%,#181f27c4 100%);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 100%);
+}
+
+.screen-outline .front .screen {
+    width: 93%;
+    aspect-ratio: 1.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(219, 219, 219);
+
+    a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        &.hover {
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            transform: translateX(-1px);
+            opacity: 1;
+            transition: 300ms ease-in-out;
+        }
+    }
+
+    &.change a img{
+        opacity: 0;
+    }
+}
+
+.screen-outline .top,
+.screen-outline .left,
+.screen-outline .right {
+    transform-style: preserve-3d;
+    height: 3%;
+    position: absolute;
+    top: -2%;
+    transform-origin: 50% 100%;
+    transform: translateX(-50%) rotateX(90deg);
+}
+
+.screen-outline .right {
+    right: 0;
+}
+
+.screen-outline .top {
+    width: 95%;
+    background-color: #181f27;;
+    left: 50%;
+}
+
+.screen-outline .left div,
+.screen-outline .right div{
+    height: 100%;
+    width: 7px;
+    position: absolute;
+    background-color: #181f27;
+    border-left: 1px solid #181f27;
+    border-right: 1px solid #181f27;
+    border-radius: 2px;
+}
+
+.left .strip-1 {
+    left: -8px;
+    transform: translateZ(-25px) rotateY(-85deg);
+}
+.left .strip-2 {
+    left: -7px;
+    transform: translateZ(-21px) rotateY(-72deg);
+}
+.left .strip-3 {
+    left: -5px;
+    transform: translateZ(-17px) rotateY(-60deg);
+}
+.left .strip-4 {
+    left: -2px;
+    transform: translateZ(-14px) rotateY(-50deg);
+}
+.left .strip-5 {
+    left: -0px;
+    transform: translateZ(-11px) rotateY(-45deg);
+}
+.left .strip-6 {
+    left: 3px;
+    transform: translateZ(-8px) rotateY(-30deg);
+}
+.left .strip-7 {
+    left: 7px;
+    transform: translateZ(-5px) rotateY(-25deg);
+}
+.left .strip-8 {
+    left: 11px;
+    transform: translateZ(-3px) rotateY(-20deg);
+}
+.left .strip-9 {
+    left: 16px;
+    transform: translateZ(-1px) rotateY(-10deg);
+}
+
+
+.right .strip-1 {
+    right: -12px;
+    transform: translateZ(-25px) rotateY(75deg);
+}
+.right .strip-2 {
+    right: -10px;
+    transform: translateZ(-21px) rotateY(62deg);
+}
+.right .strip-3 {
+    right: -8px;
+    transform: translateZ(-17px) rotateY(58deg);
+}
+.right .strip-4 {
+    right: -5px;
+    transform: translateZ(-14px) rotateY(46deg);
+}
+.right .strip-5 {
+    right: -2px;
+    transform: translateZ(-11px) rotateY(42deg);
+}
+.right .strip-6 {
+    right: 3px;
+    transform: translateZ(-8px) rotateY(35deg);
+}
+.right .strip-7 {
+    right: 7px;
+    transform: translateZ(-5px) rotateY(25deg);
+}
+.right .strip-8 {
+    right: 11px;
+    transform: translateZ(-3px) rotateY(13deg);
+}
+.right .strip-9 {
+    right: 17px;
+    transform: translateZ(-1px) rotateY(12deg);
+}
+
+.base {
+    height: 5%;
+    width: 100%;
+}
+
+.base .front {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(90deg, rgba(168,168,172,1) 0%, rgba(224,226,228,1) 2%, rgba(154,156,160,1) 7%, rgba(220,222,223,1) 15%, rgba(242,242,244,1) 50%, rgba(220,222,223,1) 85%, rgba(154,156,160,1) 93%, rgba(224,226,228,1) 98%, rgba(168,168,172,1) 100%);
+    border-radius: 5px 5px 1px 1px;
+    z-index: 20;
+}
+
+.base .front .handle {
+    position: absolute;
+    width: 15%;
+    height: 70%;
+    background: linear-gradient(90deg, rgba(168,167,168,1) 0%, rgba(215,217,219,1) 20%, rgba(215,217,219,1) 50%, rgba(215,217,219,1) 80%, rgba(168,167,168,1) 100%);
+    border-radius: 0px 0px 50px 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.base .bottom {
+    margin: auto;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    
+}
+
+.base .bottom .left,
+.base .bottom .center,
+.base .bottom .right {
+    background: linear-gradient(180deg, rgb(195, 194, 197) 0%, rgb(93, 94, 97) 90%);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.37);
+    z-index: 20;
+}
+
+.base .bottom .left {
+    width: 10%;
+    height: 100%;
+    border-radius: 0px 0px 0px 100%;
+}
+
+.base .bottom .center {
+    width: 100%;
+    height: 100%;
+}
+
+.base .bottom .right {
+    width: 10%;
+    height: 100%;
+    border-radius: 0px 0px 100% 0px;
+}
+
+:root * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}

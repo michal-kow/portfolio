@@ -1,0 +1,50 @@
+.ProjectInfo {
+
+    transform: translateY(-10%);
+
+    a {
+        text-decoration: none;
+    
+        h3 {
+            font-family: "Archivo";
+            font-weight: 700;
+            color: var(--accent-clr);
+            font-size: 54px;
+            margin-bottom: 25px;
+            transition: 200ms ease-in-out;
+        }
+
+        &:hover h3 {
+            transform: scale(1.05);
+        }
+    }
+
+    p {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .page-link,
+        .source-code-link {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--accent-clr);
+            border: 3px solid var(--accent-clr);
+            padding: 7px 10px;
+            border-radius: 1000px;
+            transition: 200ms ease-in-out;
+
+            &:hover {
+                background-color: var(--accent-clr);
+                color: var(--background-clr);
+            }
+        }
+    }
+}

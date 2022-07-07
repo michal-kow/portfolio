@@ -1,0 +1,29 @@
+.Dots {
+    margin-top: 50px;
+    width: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    
+    .dot {
+        aspect-ratio: 1;
+        height: 15px;
+        background-color: var(--background-clr);
+        border-radius: 50%;
+        border: 1px solid var(--accent-clr);
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #76dbd342;
+            transform: scale(1.3);
+        }
+
+        &.active {
+            background-color: var(--accent-clr);
+            transform: scale(1.3);
+        }
+    }
+}

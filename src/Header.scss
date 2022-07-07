@@ -1,0 +1,27 @@
+.Header {
+    position: fixed;
+    height: 4%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 1000;
+
+    a {
+        height: 100%;
+        font-size: 38px;
+        transition: 200ms ease-in-out;
+        z-index: 1002;
+        
+        &:first-of-type {
+            margin-right: 20px;
+        }
+        
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+}
