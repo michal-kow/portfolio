@@ -1,3 +1,5 @@
+@import './breakpoints.scss';
+
 .LaptopComponent {
     flex: 2;
     transform-style: preserve-3d;
@@ -12,9 +14,21 @@
     justify-content: center;
     transform: translateX(-25%);
     transition: 300ms ease-in-out;
+    order: 2;
+
+    @include md {
+        transform: translateX(0%)  translateY(50%);
+        width: 100%;
+        margin-bottom: 25px;
+        order: 1;
+    }
 
     &.moved {
         transform: translateX(0%);
+
+        @include md {
+            transform: translateY(0%);
+        }
     }
 }
 
@@ -25,7 +39,15 @@
     position: relative;
     transform-origin: 50% 100%;
     z-index: 1;
-    animation: screen 2s ease-in-out;
+    animation: none;
+
+    // @include xl {
+    //     animation: screen 2s ease-in-out;
+    // }
+
+    @include lg {
+        animation: none;
+    }
 }
 
 @keyframes screen {

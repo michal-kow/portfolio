@@ -9,6 +9,24 @@
     max-width: 1400px;
     padding: 150px 0;
 
+    @include lg {
+        padding: 100px 0;
+    }
+    
+    @include md {
+        padding: 75px 0;
+    }
+
+    @include sm {
+        flex-direction: column;
+        padding: 100px 0;
+    }
+    
+    @include xs {
+        flex-direction: column;
+        padding: 75px 0;
+    }
+
     .info-container {
         margin: 50px;
         display: flex;
@@ -16,14 +34,58 @@
         justify-content: center;
         align-items: center;
 
+        @include md {
+            margin: 40px;
+        }
+        
+        @include sm {
+            margin: 25px;
+        }
+        
+        @include xs {
+            margin: 15px;
+        }
+
         .hello {
             font-size: 72px;
             font-weight: 100;
+
+            @include lg {
+                font-size: 64px;
+            }
+
+            @include md {
+                font-size: 56px;
+            }
+
+            @include sm {
+                font-size: 48px;
+            }
+
+            @include xs {
+                font-size: 32px;
+            }
         }
 
         .name {
             font-size: 72px;
             margin-bottom: 2%;
+
+            @include lg {
+                font-size: 64px;
+            }
+
+            @include md {
+                font-size: 56px;
+            }
+
+            @include sm {
+                font-size: 48px;
+            }
+            
+            @include xs {
+                font-size: 32px;
+            }
 
             span {
                 cursor: default;
@@ -45,6 +107,24 @@
             font-size: 28px;
             font-weight: 300;
             padding: 0 15%;
+
+            @include lg {
+                padding: 0;
+            }
+
+            @include md {
+                padding: 0;
+            }
+
+            @include sm {
+                font-size: 24px;
+                padding: 0;
+            }
+
+            @include xs {
+                font-size: 20px;
+                padding: 0;
+            }
         }
 
     }
@@ -56,6 +136,24 @@
         margin: 50px;
         // transform: translateY(25%);
         transition: 200ms ease-in-out;
+
+        @include lg {
+            margin: 40px;
+        }
+
+        @include md {
+            margin: 25px;
+        }
+
+        @include sm {
+            margin: 15px;
+            width: 70%;
+        }
+        
+        @include xs {
+            margin: 15px;
+            width: 80%;
+        }
 
         &:hover {
             // transform: translateY(25%) scale(1.1);

@@ -1,12 +1,42 @@
+@import './breakpoints.scss';
+
 .Skills {
     width: 100%;
     background-color: var(--accent-clr-orange);
     padding: 50px 0px;
     z-index: 1;
 
+    @include md {
+        padding: 40px 0;   
+    }
+
+    @include sm {
+        padding: 35px 0;
+    }
+    
+    @include xs {
+        padding: 25px 0;
+    }
+
     h2 {
         font-size: 64px;
         font-weight: 100;
+
+        @include lg {
+            font-size: 60px;
+        }
+
+        @include md {
+            font-size: 56px;
+        }
+
+        @include sm {
+            font-size: 48px;
+        }
+
+        @include xs {
+            font-size: 32px;
+        }
     }
 
     .skills-container {
@@ -19,5 +49,30 @@
         justify-content: space-evenly;
         font-size: 56px;
         border-radius: 100px;
+
+        @include lg {
+            font-size: 60px;
+        }
+
+        @include md {
+            max-width: 65%;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 56px;
+        }
+
+        @include sm {
+            max-width: 80%;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 48px;
+        }
+
+        @include xs {
+            max-width: 80%;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 32px;
+        }
     }   
 }

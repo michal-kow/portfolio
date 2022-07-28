@@ -1,6 +1,12 @@
+@import './breakpoints.scss';
+
 .ProjectInfo {
 
     transform: translateY(-10%);
+
+    @include md {
+        transform: translateY(0%);
+    }
 
     a {
         text-decoration: none;
@@ -12,6 +18,22 @@
             font-size: 54px;
             margin-bottom: 25px;
             transition: 200ms ease-in-out;
+
+            @include lg {
+                font-size: 48px;
+            }
+
+            @include md {
+                font-size: 42px;
+            }
+
+            @include sm {
+                font-size: 36px;
+            }
+
+            @include xs {
+                font-size: 28px;
+            }
         }
 
         &:hover h3 {
@@ -22,6 +44,18 @@
     p {
         font-size: 20px;
         margin-bottom: 25px;
+
+        @include lg {
+            font-size: 18px;
+        }
+
+        @include sm {
+            font-size: 16px;
+        }
+
+        @include xs {
+            font-size: 14px;
+        }
     }
 
     .btn-container {
@@ -40,6 +74,22 @@
             padding: 7px 10px;
             border-radius: 1000px;
             transition: 200ms ease-in-out;
+
+            @include lg {
+                font-size: 16px;
+            }
+
+            @include md {
+                font-size: 18px;
+            }
+
+            @include sm {
+                font-size: 16px;
+            }
+
+            @include xs {
+                font-size: 12px;
+            }
 
             &:hover {
                 background-color: var(--accent-clr);

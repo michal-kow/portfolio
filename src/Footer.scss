@@ -1,9 +1,22 @@
+@import './breakpoints.scss';
+
 .Footer {
     width: 100%;
     background-color: var(--dark-clr);
+    z-index: 1050;
 
     p {
         padding: 10px 0;
         color: var(--background-clr);
+
+        @include sm {
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        @include xs {
+            padding: 5px 0;
+            font-size: 12px;
+        }
     }
 }

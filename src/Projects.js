@@ -13,16 +13,17 @@ const Projects = () => {
 
     const projects = jsonData;
 
-    const offsetStart = 900;
-    const offsetEnd = 2000;
+    const offsetStart = 926;
+    const offsetEnd = 1800;
 
     window.addEventListener('scroll', () => {
         const scrollValue = ( window.pageYOffset - offsetStart ) / ( document.body.offsetHeight - offsetStart - offsetEnd - window.innerHeight );
         document.documentElement.style.setProperty('--scroll', scrollValue);
         if (scrollValue > 1.9) {
-            setIsProjectsInfoVisible(true);
-        } else {
+            // if (window.innerHeight )
             setIsProjectsInfoVisible(false);
+        } else {
+            setIsProjectsInfoVisible(true);
         }
     }, false);
 

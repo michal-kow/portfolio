@@ -1,3 +1,5 @@
+@import './breakpoints.scss';
+
 .Dots {
     margin-top: 50px;
     width: 8%;
@@ -6,6 +8,22 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
+
+    @include lg {
+        width: 11%;
+    }
+
+    @include md {
+        width: 14%;
+    }
+
+    @include sm {
+        width: 18%;
+    }
+
+    @include xs {
+        width: 25%;
+    }
     
     .dot {
         aspect-ratio: 1;
@@ -14,6 +32,22 @@
         border-radius: 50%;
         border: 1px solid var(--accent-clr);
         transition: 200ms ease-in-out;
+
+        @include lg {
+            height: 14px;
+        }
+
+        @include md {
+            height: 13px;
+        }
+
+        @include sm {
+            height: 12px;
+        }
+
+        @include xs {
+            height: 11px;
+        }
 
         &:hover {
             cursor: pointer;
