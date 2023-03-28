@@ -39,15 +39,15 @@
     position: relative;
     transform-origin: 50% 100%;
     z-index: 1;
-    animation: none;
+    animation: screen 2s ease-in-out;
 
     // @include xl {
     //     animation: screen 2s ease-in-out;
     // }
 
-    @include lg {
-        animation: none;
-    }
+    // @include lg {
+    //     animation: none;
+    // }
 }
 
 @keyframes screen {
@@ -287,7 +287,7 @@
     /* Pause the animation */
     animation-play-state: paused;
     /* Bind the animation to scroll */
-    animation-delay: calc(var(--scroll) * -1s);
+    animation-delay: calc(var(--scroll) * -2s);
     /* These last 2 properites clean up overshoot weirdness */
     animation-iteration-count: 1;
     animation-fill-mode: both;

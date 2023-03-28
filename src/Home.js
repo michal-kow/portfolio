@@ -25,7 +25,7 @@ const Home = () => {
                     and I'm a frontend developer who cares about aesthetics and user interaction.
                 </p>
             </div>
-            <img className='gradient-img' src={require('./assets/gradient.jpg')} alt="gradient" />
+            <img className='gradient-img' src={require('./assets/picture_circle.png')} alt="gradient" />
         </div>
     );
 }

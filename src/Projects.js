@@ -1,6 +1,6 @@
 import './Projects.scss'
 import LaptopComponent from './LaptopComponent';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Dots from './Dots';
 import { jsonData } from './projects-data';
 import ProjectInfo from './ProjectInfo';
@@ -10,20 +10,32 @@ const Projects = () => {
     const [activeProject, setActiveProject] = useState(0);
     const [isProjectsInfoVisible, setIsProjectsInfoVisible] = useState(false);
     const [isProjectChanging, setIsProjectChanging] = useState(false);
+    const [offsetStart, setOffsetStart] = useState(100);
+    const [offsetEnd, setOffsetEnd] = useState(1000);
 
     const projects = jsonData;
 
-    const offsetStart = 926;
-    const offsetEnd = 1800;
+    useEffect(() => {
+        const homeHeight = document.querySelector('.Home').offsetHeight;
+        const skillsHeight = document.querySelector('.Skills').offsetHeight;
+        const contactHeight = document.querySelector('.Contact').offsetHeight;
+        setOffsetStart(homeHeight+skillsHeight);
+        setOffsetEnd(contactHeight);
+    }, [])
+
 
     window.addEventListener('scroll', () => {
-        const scrollValue = ( window.pageYOffset - offsetStart ) / ( document.body.offsetHeight - offsetStart - offsetEnd - window.innerHeight );
+        let scrollValue = ( window.pageYOffset + window.innerHeight - 1.8*offsetStart ) / ( document.body.offsetHeight - offsetStart - 2*offsetEnd );
+        if (scrollValue < 0) {
+            scrollValue = 0;
+        } else if (scrollValue > 1) {
+            scrollValue = 1;
+        }
         document.documentElement.style.setProperty('--scroll', scrollValue);
-        if (scrollValue > 1.9) {
-            // if (window.innerHeight )
-            setIsProjectsInfoVisible(false);
-        } else {
+        if (scrollValue > 0.5) {
             setIsProjectsInfoVisible(true);
+        } else {
+            setIsProjectsInfoVisible(false);
         }
     }, false);
 
