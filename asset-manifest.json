@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d8919286.css",
-    "main.js": "/portfolio/static/js/main.0918197c.js",
+    "main.css": "/portfolio/static/css/main.63854951.css",
+    "main.js": "/portfolio/static/js/main.04faf266.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/picture_circle.png": "/portfolio/static/media/picture_circle.74dda0ee42ff733c3ee9.png",
     "static/media/dermica.png": "/portfolio/static/media/dermica.bb799f1f626745ed8aa2.png",
-    "static/media/gradient.jpg": "/portfolio/static/media/gradient.7091e59546f2453e00f8.jpg",
     "static/media/weather-api-app.png": "/portfolio/static/media/weather-api-app.276fa7845588922c5d93.png",
     "static/media/mashapp.png": "/portfolio/static/media/mashapp.7dbff08c2f000b7a226b.png",
     "static/media/tic-tac-toe.png": "/portfolio/static/media/tic-tac-toe.200703cf284db26b170b.png",
     "index.html": "/portfolio/index.html",
-    "main.d8919286.css.map": "/portfolio/static/css/main.d8919286.css.map",
-    "main.0918197c.js.map": "/portfolio/static/js/main.0918197c.js.map",
+    "main.63854951.css.map": "/portfolio/static/css/main.63854951.css.map",
+    "main.04faf266.js.map": "/portfolio/static/js/main.04faf266.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8919286.css",
-    "static/js/main.0918197c.js"
+    "static/css/main.63854951.css",
+    "static/js/main.04faf266.js"
   ]
 }
